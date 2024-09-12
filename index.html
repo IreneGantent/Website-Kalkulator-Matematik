@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h4>Welcome To Katik</h4>
+        <p>Hai Sobat, Selamat datang di katik :)</p>
+        <p>
+          Sebuah web app sederhana yang berfungsi untuk menghitung nilai luas
+          dan keliling bangun datar
+        </p>
+      </div>
+
+      <!-- Tab navigation -->
+      <div class="tabs">
+        <div class="tab active" onclick="showTab('luas')">Luas Segitiga</div>
+        <div class="tab non-active" onclick="showTab('keliling')">
+          Keliling Segitiga
+        </div>
+      </div>
+
+      <br>
+
+      <!-- Luas Segitiga Section -->
+      <div id="luas" class="card">
+        <div class="kop">
+          <h4>Luas Segitiga</h4>
+        </div>
+
+        <div class="content">
+          <div style="margin-top: 10px; display: flex; justify-content: center">
+            <img src="keliling.png" alt="" />
+          </div>
+
+          <p>Rumus Luas Segitiga Yaitu :</p>
+          <p style="text-align: center; font-weight: bold">L = 1/2 x a x t</p>
+
+          <p>Dimana :</p>
+          <p>L = Luas</p>
+          <p>a = Panjang Alas</p>
+          <p>t = Tinggi</p>
+
+          <label for="alas">Masukkan Alas:</label>
+          <input type="number" id="alas" placeholder="Masukkan alas segitiga" />
+
+          <label for="tinggi">Masukkan Tinggi:</label>
+          <input
+            type="number"
+            id="tinggi"
+            placeholder="Masukkan tinggi segitiga"
+          />
+
+          <div class="result" id="result"></div>
+          <div style="display: flex; justify-content: center; margin-top: 20px">
+            <button onclick="hitungLuas()">Hitung Luas</button>
+          </div>
+          <div class="button-group">
+            <button onclick="resetForm()">Reset</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Keliling Segitiga Section -->
+      <div id="keliling" class="card hidden">
+        <div class="kop">
+          <h4>Keliling Segitiga</h4>
+        </div>
+
+        <div class="content">
+          <div style="margin-top: 10px; display: flex; justify-content: center">
+            <img src="keliling.png" alt="" />
+          </div>
+
+          <p>Rumus Keliling Segitiga Yaitu :</p>
+          <p style="text-align: center; font-weight: bold">K = S1 + S2 + S3</p>
+
+          <p>Dimana :</p>
+          <p>K = Keliling</p>
+          <p>S1 = Sisi 1</p>
+          <p>S2 = Sisi 2</p>
+          <p>S3 = Sisi 3</p>
+
+          <h2 style="text-align: center">Hitung Keliling Segitiga</h2>
+          <input type="number" id="sisi1" placeholder="Masukkan sisi 1" />
+          <input type="number" id="sisi2" placeholder="Masukkan sisi 2" />
+          <input type="number" id="sisi3" placeholder="Masukkan sisi 3" />
+
+          <div class="result" id="resultKl"></div>
+          <div style="display: flex; justify-content: center; margin-top: 20px">
+            <button onclick="hitungKeliling()">Hitung</button>
+          </div>
+          <div class="button-group">
+            <button onclick="resetFormKl()">Reset</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
